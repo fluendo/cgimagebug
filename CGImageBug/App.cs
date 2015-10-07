@@ -6,18 +6,12 @@ namespace CGImageBug
 	public class App : Application
 	{
 
-		CGImageBug.Image img1, img2, img3;
-
 		public App ()
 		{
-			img1 = new CGImageBug.Image ("longomatch_dark_bg_png").Clone ();
-			//img2 = new CGImageBug.Image ("longomatch_dark_bg_png").Clone ();
-			//img3 = new CGImageBug.Image ("longomatch_dark_bg_png").Clone ();
-
 			Button b = new Button {
 				VerticalOptions = LayoutOptions.FillAndExpand,
 				HorizontalOptions = LayoutOptions.FillAndExpand,
-				Text = "Bug",
+				Text = "Press to go to the next page",
 			};
 			StackLayout layout = new StackLayout {
 				VerticalOptions = LayoutOptions.FillAndExpand,
@@ -34,10 +28,6 @@ namespace CGImageBug
 
 		void B_Clicked (object sender, EventArgs e)
 		{
-			Console.WriteLine ("Serializing");
-			img1.Serialize ();
-			//img2.Serialize ();
-			//img3.Serialize ();
 			Application.Current.MainPage.Navigation.PushAsync (
 				new NewPage ()
 			);

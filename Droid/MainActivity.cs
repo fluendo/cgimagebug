@@ -23,8 +23,6 @@ namespace CGImageBug.Droid
 
 			LoadApplication (new App ());
 		}
-
-
 	}
 }
 
